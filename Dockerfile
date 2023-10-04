@@ -1,5 +1,8 @@
 FROM alexwijn/docker-git-php-composer
 
+LABEL maintainer="Claudio Valerio <info@claudiovalerio.it>"
+
+
 RUN curl https://getcomposer.org/installer | php
 
 WORKDIR /src
@@ -11,4 +14,4 @@ WORKDIR /src/browscap
 
 RUN composer install
 
-ENTRYPOINT ["bin/browscap", "build"]
+ENTRYPOINT ["bin/browscap", "build", "20231004"]
